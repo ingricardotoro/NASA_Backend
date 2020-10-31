@@ -19,10 +19,10 @@ const { listPicture, createPicture, deletePicture } = require('../controllers/pi
 //=======================
 //Route to crate a new picture (POST) .../api/pictures
 router.post('/', [
-    check('title', 'El personId es obligatorio').not().isEmpty(),
-    check('url', 'El codeEmpleado es obligatorio').not().isEmpty(),
-    check('date', 'El nombre de la persona es obligatorio').not().isEmpty(),
-    check('explanation', 'El apellido de la persona es obligatorio').not().isEmpty(),
+    check('title', 'The title is obligatory').not().isEmpty(),
+    check('url', 'The url is obligatory').not().isEmpty(),
+    check('date', 'The date is obligatory').not().isEmpty(),
+    check('explanation', 'The explanation is obligatory').not().isEmpty(),
     ValidateField
 ], createPicture)
 
