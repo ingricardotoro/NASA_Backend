@@ -2,7 +2,6 @@ const express = require('express')
 const cors = require('cors')
 
 const dbConnection = require('./database/config')
-require('./config/config')
 
 require('dotenv').config() // establecer uso de arvhivo env
 
