@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-//Ruta para la gestion de Personas
+//Route to manage the pictures
 app.use('/api/pictures', require('./pictures'))
 
 

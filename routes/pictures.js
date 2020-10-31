@@ -12,28 +12,25 @@ const { check } = require('express-validator')
 const { ValidateField } = require('../middlewares/validateField')
 
 //import the controllers
-const { listPicture } = require('../controllers/picturesController')
+const { listPicture, createPicture, deletePicture } = require('../controllers/picturesController')
 
 //=======================
 //ROUTES
 //=======================
-//Rutas para crear nuevos empleados (POST) .../api/employees
-/*router.post('/', [
-    check('personid', 'El personId es obligatorio').not().isEmpty(),
-    check('codeEmployee', 'El codeEmpleado es obligatorio').not().isEmpty(),
-    check('name', 'El nombre de la persona es obligatorio').not().isEmpty(),
-    check('lastname', 'El apellido de la persona es obligatorio').not().isEmpty(),
-    check('identidad', 'La identidad de la persona es obligatoria').not().isEmpty(),
-    check('gender', 'El género de la persona es obligatorio').not().isEmpty(),
-    check('phone1', 'El teléfono de la persona es obligatoria').not().isEmpty(),
-    validarCampo
-], createEmployee)*/
+//Route to crate a new picture (POST) .../api/pictures
+router.post('/', [
+    check('title', 'El personId es obligatorio').not().isEmpty(),
+    check('url', 'El codeEmpleado es obligatorio').not().isEmpty(),
+    check('date', 'El nombre de la persona es obligatorio').not().isEmpty(),
+    check('explanation', 'El apellido de la persona es obligatorio').not().isEmpty(),
+    ValidateField
+], createPicture)
 
-//Ruta para listar a todos los empleados creados
+//Route to show all the pictures  (GET).../api/pictures
 router.get('/', listPicture)
 
-//Rutas para crear actualizar empleado por ID (DELETE) .../api/employees/delete/id
-//router.delete('/delete/:id', deleteEmployee)
+//Route to delete one picture by ID (DELETE) .../api/picture/delete/id
+router.delete('/delete/:id', deletePicture)
 
 
 module.exports = router

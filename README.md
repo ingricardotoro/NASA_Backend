@@ -4,4 +4,4 @@ Ing. Marvin Ricardo Toro
 
 SERVER API FOR NASA FRONTED
 
-Developer in NodeJs and Express
+Developer in NodeJs - Express - Mongo
